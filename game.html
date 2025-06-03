@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego Matemático</title>
+  <link rel="stylesheet" href="game.css">
+  <style>
+    /* Estilos para el modal */
+    .modal {
+      display: none; /* Se oculta inicialmente */
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      width: 300px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .modal p {
+      margin: 10px 0;
+    }
+
+    .modal button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #ff5c5c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .modal button:hover {
+      background-color: #ff4040;
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <header>
+      <h1>Juego Matemático</h1>
+    </header>
+    
+    <main>
+      <!-- Mostrar la categoría del usuario -->
+      <div class="categoria">
+        <h2 id="cat"></h2>
+      </div>
+
+      <!-- Ejercicio Actual -->
+      <div class="ejercicio">
+        <h3 id="ejercicio"></h3>
+      </div>
+
+      <!-- Input para la respuesta -->
+      <div class="respuesta">
+        <input type="number" id="respuesta" placeholder="Tu respuesta" />
+        <button onclick="verificar()">Verificar</button>
+      </div>
+
+      <!-- Mostrar el resultado -->
+      <div class="resultado">
+        <p id="resultado"></p>
+      </div>
+
+      <!-- Proceso de la operación -->
+      <div class="proceso">
+        <p id="proceso"></p>
+      </div>
+
+      <!-- Barra con puntaje y vidas -->
+      <div class="barra">
+        <p> <span id="score">0</span> | <span id="vidas">3</span></p>
+      </div>
+
+      <!-- Botón para siguiente ejercicio -->
+      <button id="siguiente" style="display:none;" onclick="siguienteEjercicio()">Siguiente ejercicio</button>
+
+      <!-- Botón para terminar el juego -->
+      <button id="terminarJuego" onclick="terminarJuego()">Terminar Juego</button>
+    </main>
+  </div>
+
+  <!-- Modal con resultado final -->
+  <div id="modal" class="modal">
+    <h2>Juego Terminado</h2>
+    <p id="mensajeResultado"></p>
+    <p id="mensajeMotivacional"></p>
+    <button onclick="reiniciarJuego()">Jugar de nuevo</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

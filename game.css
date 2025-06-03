@@ -1,0 +1,307 @@
+/* Reseteo de márgenes y relleno */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* Tipografía amigable para niños */
+}
+
+body {
+  background: #f9f7f7;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-size: 16px;
+  padding: 2rem;
+  flex-direction: column;
+  transition: background-color 0.3s ease;
+}
+
+.dashboard {
+  width: 100%;
+  max-width: 1200px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+}
+
+header {
+  background: #ff6347; /* Color de fondo brillante */
+  color: white;
+  padding: 2.5rem;
+  text-align: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  animation: bounce 1s infinite alternate;
+}
+
+/* Animación de rebote para el título */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+main {
+  padding: 2rem;
+}
+
+.intro {
+  margin-bottom: 2rem;
+}
+
+.intro h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #ff6347;
+  text-transform: uppercase;
+}
+
+#cat {
+  font-size: 2.5rem;  /* Tamaño más grande para la categoría */
+  font-weight: bold;
+  color: #080808;  /* Azul más brillante */
+    margin-bottom: 1.5rem;
+}
+
+#ejercicio {
+  font-size: 1.8rem;  /* Tamaño más grande para el ejercicio */
+  color: #121313;  /* Color oscuro para contraste */
+  margin-bottom: 1.5rem;
+}
+
+#result {
+  font-size: 2rem;  /* Tamaño más grande para el resultado */
+  color: #e74c3c;  /* Rojo brillante para destacar */
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+
+/* Input mejorado */
+input[type="number"] {
+  padding: 1.5rem 2rem;
+  border: 2px solid #3498db;
+  border-radius: 12px;
+  margin-bottom: 2rem; /* Se aumenta el margen para separar más del botón */
+  font-size: 1.6rem; /* Números grandes */
+  width: 80%;
+  max-width: 350px;
+  text-align: center;
+  transition: all 0.4s ease-in-out;
+  background: linear-gradient(135deg, #e6f4fe, #b3e0ff); /* Fondo degradado suave */
+  color: #2c3e50;
+  font-weight: bold;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+input[type="number"]:focus {
+  outline: none;
+  border-color: #2ecc71;  /* Borde verde brillante al enfocar */
+  background-color: #e1f7d5;  /* Fondo verde suave */
+  box-shadow: 0 6px 20px rgba(46, 204, 113, 0.5);
+}
+
+input[type="number"]:hover {
+  border-color: #f39c12;  /* Resalta el borde al pasar el ratón */
+  background-color: #fff;
+  transform: scale(1.05);  /* Aumento de tamaño al pasar el ratón */
+}
+
+/* Estilo para los botones */
+button {
+    padding: 1.5rem 2.5rem;
+    background-color: #5ebdfc; /* Azul brillante */
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    
+}
+
+button:hover {
+    background-color: #3498db; /* Azul más oscuro al pasar el ratón */
+    transform: scale(1.02);  /* Aumento de tamaño al pasar el ratón */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: scale(1); /* Vuelve al tamaño original al hacer clic */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); 
+}
+
+/* Botón "Siguiente ejercicio" */
+button#siguiente {
+  background: linear-gradient(135deg, #2ecc71, #27ae60); /* Degradado verde */
+  margin-top: 20px;
+}
+
+button#siguiente:hover {
+  background: linear-gradient(135deg, #1e8e46, #16a085); /* Cambio de degradado */
+}
+
+button#siguiente:active {
+  background: linear-gradient(135deg, #1e8e46, #1c6b49); /* Cambio de degradado */
+}
+
+#proceso {
+  font-size: 2.5rem;  /* Tamaño más grande para el proceso */
+  color: #2ecc71;  /* Verde brillante */
+  font-weight: bold;
+  margin-top: 1.5rem;  /* Espacio adicional arriba */
+    margin-bottom: 1.5rem;  /* Espacio adicional abajo */
+}
+
+/* Barra de Puntaje */
+.barra {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #3498db;
+  margin-bottom: 2rem;
+}
+
+.barra p {
+  font-size: 1.3rem;
+  color: #2c3e50;
+}
+
+#score {
+  font-weight: bold;
+  color: #2980b9;
+  font-size: 2rem;
+}
+
+/* Barra de Vida */
+.barra-vida {
+  margin-top: 20px;
+  background-color: #f0f8ff;
+  border-radius: 10px;
+  height: 40px;  /* Aumentamos la altura para que se vea mejor */
+  width: 80%;
+  max-width: 350px;
+  border: 2px solid #3498db;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Barra de vida interna (de acuerdo con las vidas restantes) */
+.vida-restante {
+  height: 100%;
+  background-color: #2ecc71; /* Verde brillante */
+  width: 100%; /* Esto será dinámico en función de las vidas */
+  border-radius: 8px;
+  transition: width 0.5s ease-in-out;
+}
+
+/* Estilo del Historial */
+.historial {
+  margin-top: 2rem;
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.historial h2 {
+  font-size: 1.5rem;
+  color: #34495e;
+  margin-bottom: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+thead {
+  background-color: #2c3e50;
+  color: white;
+}
+
+th, td {
+  padding: 1.2rem;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+#limpiarHistorial {
+  padding: 1rem 2.5rem;
+  background-color: #e74c3c;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#limpiarHistorial:hover {
+  background-color: #c0392b;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+#limpiarHistorial:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .dashboard {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+
+  .categorias {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  /* Ajuste de los botones */
+  #btnIniciarJuego {
+    width: 100%;
+  }
+}

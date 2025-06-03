@@ -1,0 +1,233 @@
+/* Reseteo de márgenes y relleno */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* Tipografía más amigable para niños */
+}
+
+body {
+  background: #f9f7f7;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-size: 16px;
+  padding: 2rem;
+  flex-direction: column;
+  transition: background-color 0.3s ease;
+}
+
+.dashboard {
+  width: 100%;
+  max-width: 1200px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+}
+
+header {
+  background: #ff6347; /* Color de fondo brillante */
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+main {
+  padding: 2rem;
+}
+
+.intro {
+  margin-bottom: 2rem;
+}
+
+.intro h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #ff6347;
+  text-transform: uppercase;
+}
+
+input[type="text"] {
+  padding: 1rem 1.5rem;
+  border: 2px solid #3498db;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  width: 80%;
+  max-width: 350px;
+  text-align: center;
+  transition: all 0.3s ease;
+  background-color: #f0f8ff; /* Fondo azul claro */
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #ff6347;
+  background-color: #e6f4fe;
+}
+
+/* Categorías - Diseño dinámico y colorido */
+.categorias {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; 
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.categorias button {
+  padding: 1.2rem 2.5rem;
+  background-color: #3498db;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 45%;
+  margin: 10px 0;
+}
+
+button:hover {
+  background-color: #2980b9;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Mover el botón "Iniciar Juego" debajo de las categorías */
+#btnIniciarJuego {
+  padding: 1rem 2.5rem;
+  background-color: #2ecc71;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin-top: 2rem;
+}
+
+#btnIniciarJuego:hover {
+  background-color: #27ae60;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+#btnIniciarJuego:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Historial */
+.historial {
+  margin-top: 2rem;
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.historial h2 {
+  font-size: 1.5rem;
+  color: #34495e;
+  margin-bottom: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+thead {
+  background-color: #2c3e50;
+  color: white;
+}
+
+th, td {
+  padding: 1.2rem;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+#limpiarHistorial {
+  padding: 1rem 2.5rem;
+  background-color: #e74c3c;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#limpiarHistorial:hover {
+  background-color: #c0392b;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+#limpiarHistorial:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .dashboard {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+
+  .categorias {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  /* Ajuste de los botones */
+  #btnIniciarJuego {
+    width: 100%;
+  }
+}
