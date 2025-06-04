@@ -111,7 +111,7 @@ function generarEjercicio() {
             operator = '-';
             break;
         case 'Multiplicación':
-            max = 9999999;
+            max = 99999;
             num1 = Math.floor(Math.random() * (max - min + 1)) + min;
             num2 = Math.floor(Math.random() * (max - min + 1)) + min;
             resultado = num1 * num2;
@@ -119,7 +119,7 @@ function generarEjercicio() {
             break;
         case 'División':
             max = 9999999;
-            num2 = Math.floor(Math.random() * (max - min + 1)) + min;
+            num2 = Math.floor(Math.random() * (99 - min + 1)) + min;
             resultado = Math.floor(Math.random() * 10) + 1;
             num1 = num2 * resultado;
             operator = '÷';
